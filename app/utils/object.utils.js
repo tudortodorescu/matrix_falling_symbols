@@ -4,3 +4,7 @@ export function generateQueryConstructor( query ) {
         this[ key ] = query[ key ]
     }
 }
+
+export function generateArray( length, callbackFn ) {
+    return [ ...(new Array( length )) ].map( callbackFn )
+}
