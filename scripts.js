@@ -1,6 +1,6 @@
 import { generateQueryConstructor, generateArray } from '/app/utils/object.utils.js'
 import { randomInArray, randomNumber } from '/app/utils/general.utils.js'
-import matrixCharacters from '/app/matrix/matrixCharacters.string.js'
+import matrixCharacters from '/app/letters/matrixCharacters.string.js'
 
 class MatrixEffect {
     constructor() {
@@ -95,10 +95,12 @@ class MatrixSymbol {
     }
 }
 
+////////////
+
 const canvas = document.getElementsByTagName( 'canvas' )[ 0 ]
 
 const matrixEffect = new MatrixEffect({ canvas, settings: {
-    columnSize: 10,
+    columnSize: 30,
     fallingSpeed: 30,
     fadeOutEffect: '10',
     symbolsColors: [ 'lightgreen' ]
